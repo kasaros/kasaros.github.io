@@ -1,6 +1,12 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #484848;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .container {
@@ -44,9 +50,11 @@ body {
 }
 
 .navbar-item-special {
-  background-color: rgb(0, 128, 255);
+  /* background-color: rgb(0, 128, 255); */
   padding: 10px;
   border-radius: 10px;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .navbar-searchbar-container {
@@ -70,6 +78,20 @@ input[type="text"] {
   border: none;
   cursor: pointer;
 }
+.navbar-cart{
+  height: 20px;
+  margin: 5px 5px 0 0;
+  margin-left: auto;
+  font-size: 8px;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 3px;
+}
+button.navbar-cart{
+  float: right;
+}
+
 
 /* carousel  */
 * {
@@ -234,7 +256,6 @@ Fading animation */ .fade {
   align-items: center;
   /* justify-content: center; */
   /* margin-left: auto; */
-  column-gap: 10px;
   position: relative;
   right: 10rem;
   bottom: -70%;
@@ -243,11 +264,192 @@ Fading animation */ .fade {
 .discount-text {
   padding: 5px;
   color: rgb(186, 186, 186);
-  background-color: rgba(0, 128, 255, 0.59);
-  border-style: solid;
-  border-color: #484848;
+  background-color: rgba(0, 128, 255, 0.8);
+  /* border-style: solid;
+  border-color: #484848; */
+}
+.discount-text--thb {
+  padding: 5px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* border-style: solid;
+  border-color: #484848; */
 }
 
 .discount-text--large {
   font-size: 20px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 17px;
+  row-gap: 65px;
+}
+.game-item {
+  width: 24%;
+  height: 200px;
+  /* box-sizing: border-box;   */
+}
+.game-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.game-item-add-to-cart{
+  position: relative;
+  margin-left: auto;
+  margin-right: 2px;
+  bottom: 20px;
+  width: 70px;
+  text-align: center;
+  background-color: green;
+  font-size: 10px;
+}
+.game-item-title-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  bottom: 15px;
+}
+.game-item-title{
+  width: 80%;
+  text-align: left;
+  word-wrap: break-word;
+  /* font-size: 14px; */
+}
+.game-item-thb{
+  width: 20%;
+  text-align: right;
+}
+.game-item-add-to-cart-container{
+  width: 20%;
+  align-items: start;
+}
+
+/* cart  */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cart-item {
+  width: 1366px;
+  border: solid;
+  border-color: #484848;
+  
+}
+.cart-item-body{
+  display: flex;
+  flex-direction: row;
+}
+.cart-item-img-container {
+  display: flex;
+  /* flex: 50%; */
+  align-items: center;
+  flex: 60%;
+  height: 200px;
+}
+.cart-item-img {
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: top;
+}
+.cart-item-title-container{
+  display: flex;
+  flex: 40%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 40px;
+}
+.cart-item-title{
+  width: 80%;
+  text-align: left;
+  padding-left: 20px;
+  word-wrap: break-word;
+}
+.cart-item-thb{
+  width: 20%;
+  text-align: left;
+}
+.cart-item-add-to-cart{
+  position: relative;
+  /* margin-left: auto;
+  margin-right: 2px;
+  bottom: 20px; */
+  width: 50px;
+  height: 15px;
+  text-align: center;
+  background-color: red;
+  font-size: 10px;
+}
+.cart-total {
+  background-color: green;
+  width: 100px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 5px;
+}
+.cart-buy {
+  text-align: center;
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+}
+.cart-buy:hover{
+  background-color: rgb(0, 70, 0);
+  border: solid;
+  border-color: grey;
+}
+.cart-more-games {
+  text-align: right;
+  font-size: 20px;
+  height: 30px;
+  color: gray;
+  background-color: #333333;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+}
+button.cart-buy {
+  float: right;
+
+}
+button.cart-more-games {
+  float: right;
+}
+.checkout-container {
+  display: flex;
+}
+.checkout-item {
+  margin-left: 20px
+}
+.billing-address {
+  width: 300px;
+  height: 35px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+.exp-date {
+  width: 100px;
+  height: 35px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
 }
